@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto,sans-serif;
+    
+}
+/*Дефолтные настройки*/
+body{
+    margin:0 0 0;
+    background-color: #eee;
+}
+.source{
+	max-width: 74em;
+	margin: 0 auto;
+    padding: 0px;
+    z-index: 3;
+    }
+/*Header*/
+header{
+    padding: 20px 60px;
+    max-width: 75em;
+    box-shadow: 0px 2px 20px -4px rgba(0,0,0,0.75);
+    padding-bottom: 0%;
+    background-color:#009faf;
+}
+
+header nav{
+    margin-top: 1em;
+    clear: left;
+    padding-bottom: 0%;
+    padding-left: 3%;
+    text-align: center;
+}
+header nav ul{
+    list-style: none;
+}
+header img{
+    float: left;
+}
+header aside{
+    margin: 1em;
+}
+#logo{
+    color: #f9f9f9;
+    font-family:'Open Sans Light';
+    margin-top: 0%;
+    margin-left: 1%;
+    float: left;
+    font-size: 1.8em;
+}
+/*Навигация*/
+header nav li {
+    margin-right: 2.5em;
+    display: inline-block;
+}
+
+header nav li a{
+    padding: 0.3em;
+    box-sizing: border-box;
+    vertical-align: middle;
+    color: #f9f9f9;
+    text-decoration: none;
+    border-bottom-color:3px solid #4DD0E1 ; 
+    transition: border-bottom 0.2s;
+}
+
+header nav li a:hover {
+border-bottom: 3px solid #4DD0E1 ;
+}
+header nav li a:active 
+{   
+    color: white;
+    border-bottom: 3px solid white ;
+}
+/*Регистрация и вход*/
+.modal_lgn_sgn{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.219);
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+.navigation{
+    display: inline-block;
+}
+.registration{
+    display: none;
+    padding-top: 0.5em;
+    margin-left: 80%;
+    list-style: none;
+  
+}
+.registration li {
+    display: inline-block;
+}
+#login{
+    background-color: #4DD0E1;
+    width: 5em;
+    height: 2em;
+    border:0.5px solid gray;
+    border-radius:  30px;
+    transition:all 0.9s cubic-bezier(.25,.8,.25,1);
+}
+#login:hover{
+   background-color: #33B6C7;
+   cursor: pointer;
+   
+}
+#signin{
+    background-color:white;
+    width: 7em;
+    height: 2em;
+    border:0.5px solid gray;
+    border-radius:  30px;
+    transition:all 0.9s cubic-bezier(.25,.8,.25,1);
+}
+#signin:hover{
+    background-color: #EBEAEA;
+    cursor: pointer;
+}
+.login_signin{
+    left: calc(100vw/2.75);
+    top: calc(100vh/15);
+    animation:showUp 0.5s;
+    z-index: 3;
+    display: none;
+    text-align: center;
+    background-color: white;
+    padding: 1em;
+    font-size: 1.3em;
+    position: absolute;
+    border-radius: 1em;
+    box-shadow: 0px 2px 20px -4px rgba(0,0,0,0.75);
+    transition: all 0.9s slow;
+}
+.login_signin ul{
+    list-style: none;
+    text-align: left;
+    display: inline-table; 
+}
+.login_signin .text {
+    margin-right: 2em;
+}
+.login_signin .text li {
+    padding-bottom: 1.2em;
+}
+.login_signin li{
+    padding-bottom: 1em;
+}
+.login_signin p{
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+.login_signin ul input{
+    padding: 3px 5px;
+    font-size: 0.8em;
+}
+.login_signin #login_vhod, #singin_vhod,.btn,.btn_reset{
+    font-size: 1em;
+    background-color: #4DD0E1;
+    width: 6.5em;
+    height: 2em;
+    border:0.5px solid gray;
+    border-radius:  0.5em;
+    transition:all 0.2s cubic-bezier(.25,.8,.25,1);
+}
+#singin_vhod{
+    width: 10.5em;
+}
+.login_signin #login_vhod:hover, #singin_vhod,.btn:hover{
+    color: white;
+    background-color: #33B6C7;
+    cursor: pointer;
+}
+.btn_reset{
+background-color: white;
+}
+.btn_reset:hover{
+    background-color: rgb(247, 247, 247);
+    cursor: pointer;
+}
+#login_vhod:active, #singin_vhod:active{
+    color: white;
+}
+.btn_close{
+    
+    color:red;
+    border: none;
+    background-color: white;
+    float: right;
+    font-size: 1em;   
+}
+.btn_close:hover{
+    cursor: pointer;
+    text-decoration: underline red;
+}
+/*Пользователь*/
+.user{
+    padding-top: 0.5em;
+    margin-left: 80%;
+    list-style: none;
+    color:black; 
+    display: flex;   
+}
+.user li{
+    cursor: default;
+    transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.user li:hover {
+ color: white;
+ cursor: default;
+}
+#log_user{
+    color: white;
+    margin-top: 2%;
+}
+.user_sub{
+    z-index: 4;
+    position: absolute;
+    margin: 2% 0% 0% 1%;
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.user_sub li{
+    padding: 0.7em 0.6em;
+}
+.user_sub li:hover{
+    background-color: #4DD0E1;
+}
+.user_sub img{
+    float: right;
+}
+.user_sub ul {
+    list-style-type: none;
+}
+.user_sub:hover {
+    color: initial;
+    cursor: initial;
+   }
+.display_false{
+    display: none;
+}
+.display_true{
+    display: block;
+}
+
+/*Корзина*/
+.busket{
+text-decoration: none;
+text-align: center;
+padding: 0.1em;
+position: absolute;
+margin-left:2.2vw;
+top:4em;
+border-radius: 0.5em;
+transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.busket:hover{
+    border-bottom: none ;
+    cursor: pointer;
+    background-color: #4DD0E1;
+}
+.busket span{
+    top: 0.6em;
+    padding: 0 5px 0 5px;
+    border: 2px solid #009faf;
+    border-radius: 3em;
+    background-color: #4DD0E1;
+    position: absolute;
+    left: 15px; 
+}
+/*Каталог*/
+.cotalog{
+    float: left;
+    text-align: center;
+    min-width: 15%;
+    margin: 2% 2% 2% 0%;
+    background-color: #009faf;
+    box-shadow: 0px 2px 20px -4px rgba(0,0,0,0.75);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+ }
+ .cotalog a{
+    text-decoration: none;
+    color: #f9f9f9;
+ }
+ .cotalog a:hover{
+     color: #f9f9f9;
+ }
+
+ #cotalog{
+    display: inline-block;
+     padding: 5px 0 ;
+ }
+ #cotalog:hover{
+    color: #58d0e1;
+ }
+ .submenu {
+     box-sizing: content-box;
+     margin: 0;
+     width:100%;
+     display: block;
+    
+}
+.submenu a{
+    text-align: left;
+    padding: 0.7em 0.6em;
+    transition: all 0.2s ease;
+    display: inherit;
+  
+}
+.submenu a span{
+   vertical-align:sub;
+    margin-top: 5%;
+}
+.submenu a img{
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+    width: 1.9rem;
+}
+.submenu a:hover{
+    color: #015a68;
+    cursor: pointer;
+    background-color: #4DD0E1;
+}
+/*Контент*/
+div.main{
+    position: relative;
+    min-height: calc(80vh - 80px);
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    width: 83%;
+    float: right;
+    margin: 2% 0 3% 0;
+    background-color: white;
+    box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.25);
+}
+.p_title{
+    margin-bottom:20px;
+    color: #009faf;
+}
+.p_text{
+  word-wrap: break-word;
+  margin: 0 2em;
+  box-sizing: content-box;
+  transition: text-decoration 0.9s ease;
+}
+.p_text a{
+    text-decoration:underline;
+    color:#33B6C7; 
+}
+.p_text a:hover{
+    text-decoration:none;
+
+}
+.p_text a:link{
+    color: #33B6C7;
+}
+#feedback h2{
+    margin-bottom: 3%;
+    text-align: center;
+    color: #33B6C7;
+}
+#feedback{
+    float: left;
+    
+}
+#feedback button{
+    margin-right: 3%;
+}
+.form_btns{
+    text-align: center;
+}
+.feedback_content{
+    position: relative;
+    float: right;
+    width: 60%;
+    height: 100%;
+    min-height: 15rem;
+}
+.feedback_content h2{
+    color: #33B6C7;
+    margin-bottom: 3%;
+    text-align: center;
+}
+.feedback_content p{
+    word-break: break-word;
+}
+.feedback_content ul{
+    position: relative;
+    list-style: none;
+}
+.feedback_content li{
+    display: inline-block;
+    padding: 1em;
+    width: 85%;
+    vertical-align: middle;
+    box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.25);
+    list-style-type: none;
+    margin: 1rem 7%;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1); 
+    animation:showUp 0.3s;
+}
+#fb-content{
+    display: none;
+}
+.fb_name{
+   color: #009faf;
+}
+.fb_date{
+    color: #009faf;
+    float: right;
+}
+/*Футер*/
+footer{
+    padding-top: 0.5em;
+    display: inline-table;
+    box-sizing: content-box;
+    box-shadow: 0px 2px 20px -4px rgba(0,0,0,0.75);
+    height: 10vh;
+    color: white;
+    clear: both;
+    width: 100%;
+    background-color: #009faf;
+}
+/*Стиль параграфа без отступа*/
+.span_text{
+    clear: both;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+/*Стиль кнопки*/
+.more{
+    font-size: 1.3em;
+    margin: 0 0.5em;
+   padding: 0 0.3em;
+   background-color: #009faf; 
+   transition: all 0.2s ease;
+}
+.more:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #4DD0E1;
+}
+/*Стиль артикула товара*/
+.articul{
+    float: left;
+    font-size: 0.7em;
+}
+.spinner::before{
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 50%;
+    border-top: 2px solid #4DD0E1;
+    border-right: 2px solid transparent;
+    animation: spinners 0.75s linear infinite;
+}
+@keyframes spinners {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*адаптивная верстка для разрешения экрана 1024px*/
+@media (max-width: 1024px) {
+    .source{
+        padding: 0px;
+    }
+    div.main{
+        width: 80%;
+    }
+    .cotalog{
+        min-width: 18%;
+    }
+    #feedback span{
+        font-size: 1.1rem;
+    }
+    .login_signin{
+        left: calc(100vw/3);
+        top: calc(100vh/13);}
+     *{padding: 0px;}
+    html, body {
+  padding: 0;
+  margin: 0;
+}
+}
+/*Анимация появления*/
+@keyframes showUp { 
+    from {
+        transform: scale(0);    
+    }
+    to {
+        transform: scale(1);   
+    }
+  }

@@ -1,0 +1,195 @@
+/*Обнолюяем отступ с лева*/
+#id_Cot{
+    margin-left: 0%;
+}
+/*Стили для списка товаров*/
+#list {
+    text-align: center;
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+   }
+   #list li{
+    word-break: break-all;
+    width: 250px;
+    padding: 1em;
+    box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.25);
+   	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+    display: inline-table; /* Отображать как строчный элемент */
+    list-style-type: none;
+    margin:1rem;
+    word-wrap: break-word;
+   }
+   #list li img{
+    margin: 0.3em;
+    padding: 0.5em;
+    height: 200px;
+    width:100px;
+    border:1px solid black;
+    transition: all 0.2s ease;
+   }
+   #list li img:hover{
+    cursor: pointer;	
+    border:1px solid #4DD0E1;
+   }
+
+   #list li:hover{
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   }
+   /*Стиль кнопки подробнее*/
+.more{
+    margin-left: 1em;
+    padding:0.3em;
+    font-size: 1em;
+    float: left;
+    background-color: white;
+}
+/*стиль кнопки купить*/
+.buy{
+    margin-right: 1.5em;
+    padding:0.3em;
+    transition: all 0.2s ease;
+    float: right;
+    transition: all 0.2s ease;
+}
+.buy:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(219, 40, 40);
+}
+/*Увеличиваем шрифт для цены*/
+.coast{
+    font-size: 1.2em;
+}
+.infomodal{
+   display: none;
+    z-index: 4;
+    position: absolute;
+    width: 741.500px;
+    left: 5vw;
+    /*top: calc(100vh/20);*/
+    background-color: white;
+    box-shadow: 0px 2px 20px -4px rgba(0,0,0,0.75);
+    transition: all 0.9s ease-in-out;
+    padding: 1em;
+    animation: showUp 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.image{
+    transition: transform 0.1s linear;
+    position: relative;
+   /* background-image: url('100.jpg');
+    background-position-x: 0px;
+    background-position-y: 0px;*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 21.8rem;
+    width: 168px;
+    border: 1px solid black;
+    float: left;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    overflow: hidden;
+}
+.image:hover{
+    cursor: crosshair;
+    border:none;
+    background-color: white;
+    transform: scale(1.5);
+}
+.image img{
+    display: none;
+    text-align: center;
+    height: 100%;
+    width:  100%;
+}
+.infomodal p.articul{
+    padding-bottom: 0.7rem;
+    float: none;
+}
+.infotitle{
+    color: #009faf;
+    clear: both;
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    margin-left: 2rem;
+}
+.specs .infotitle{
+    margin-left: 0rem;
+}
+.infotext{
+    margin-bottom: 0.5rem;
+    margin-left: 1.2rem;
+    font-size: 1rem;
+    word-break: break-word;
+}
+.specs{
+    max-width: 50%;
+    margin-right: 20%;
+    float: right;
+}
+.textspecs{
+    word-break: break-all;
+}
+.infoname{
+    margin-left: 1rem;
+    clear: both;
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+}
+.info_btn_close{
+    position: relative;
+    left: 87%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color:red;
+}
+.info_btn_close:hover{
+    text-decoration: underline solid red;
+}
+
+div.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .3em;
+}
+
+div.filter {
+    display: flex;
+    flex-grow: 1;
+}
+
+div.filters label {
+    font-weight: bold;
+    margin-right: .2em;
+}
+
+div.filter > input {
+    flex-grow: .9;
+    padding: .2em;
+}
+
+div.sorting > select {
+    padding: .2em;
+}
+
+button.search_btn {
+    transition: .1s ease-in-out;
+    padding: .2em;
+    background-color: #009faf;
+    color: white;
+    font-size: 1em;
+    border: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 0 .4em 0 .4em;
+}
+
+button:hover {
+    color: #015a68;
+    cursor: pointer;
+    background-color: #4DD0E1;
+}
+
+button:active {
+    transform: scale(0.7);
+}

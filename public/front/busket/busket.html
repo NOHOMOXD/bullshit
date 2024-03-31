@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="./busket.css">
+    <link rel="shortcut icon" type="image/png" href="../acoustic-guitar.png">
+</head>
+
+<body>
+    <div class="modal_lgn_sgn"></div>
+    <form action="../auth/login.php" method="POST" id="login_div" class="login_signin">
+        <input type="button" class="btn_close" name="btn_cls_login" id="btn_cls_login" value="&#9746;">
+        <p>Вход</p>
+        <ul class="text">
+            <li><span>Email</span> </li>
+            <li><span>Пароль</span></li>
+        </ul>
+        <ul>
+            <li><input type="text" name="Email_login" id="Email_login" placeholder="anymail@gmail.com"
+                    onkeyup="EmailCheck(this)"></li>
+            <li><input type="password" name="Password_login" id="Pass_login"></li>
+        </ul> <br>
+        <input type="submit" id="login_vhod" value="Войти">
+    </form>
+    <form action="../auth/signup.php" method="POST" id="signin_div" class="login_signin">
+        <input type="button" class="btn_close" name="btn_cls_signin" id="btn_cls_signin" value="&#9746;">
+        <p>Регистрация</p>
+        <ul class="text">
+            <li><span>Имя</span></li>
+            <li><span>Фамилия</span></li>
+            <li><span>Номер телефона</span></li>
+            <li><span>Город</span></li>
+            <li><span>E-mail</span></li>
+            <li><span>Пароль</span></li>
+            <li><span>Повторите пароль</span></li>
+        </ul>
+        <ul>
+            <li><input type="text" name="Name_signin" id="Name_signin" placeholder="Иван"></li>
+            <li><input type="text" name="Last_signin" id="Last_signin" placeholder="Бурундуков"></li>
+            <li><input type="text" name="PhoneNumber_signin" maxlength="12" id="PhoneNumber_signin"
+                    placeholder="+79112408441"></li>
+            <li><input type="text" name="City_signin" id="City_signin" placeholder="Санкт-Петербург"></li>
+            <li><input type="text" name="Email_signin" id="Email_signin" onkeyup="EmailCheck(this)"
+                    placeholder="anymail@gmail.com"></li>
+            <li><input type="password" name="Password_signin" id="Password_signin"><span class="psw_check"></span></li>
+            <li><input type="password" name="Password_signin"><span class="psw_check"></span></li>
+        </ul> <br>
+        <input type="submit" id="singin_vhod" value="Зарегистрироваться">
+    </form>
+    <div class="source">
+        <!--Навигация-->
+        <header>
+            <div class="intr" title="Магазин Le music">
+                <img src="../acoustic-guitar.svg" alt="магазин Le music" width="60">
+                <article id="logo">Le music</article>
+                <ul class="registration">
+                    <li><input type="button" id="login" value="Вход" title="Вход"></li>
+                    <li><input type="button" id="signin" value="Регистрация" title="Регистрация"></li><br>
+                </ul>
+            </div>
+            <nav>
+                <ul class="navigation">
+                    <li>
+                        <a href="/">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/wiki">Wiki</a>
+                    </li>
+                    <li>
+                        <a href="/news">Новости</a>
+                    </li>
+                    <li>
+                        <a href="/contacts">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="/feedback">Отзывы</a>
+                    </li>
+                    <li>
+                        <a href="/busket" class="busket" title="Корзина ">
+                            <img src="../icons/shopping-basket.svg" alt="Корзина" width="50em">
+                            <span id="busket">0</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </nav>
+            &nbsp;
+        </header>
+        <!--Каталог-->
+
+        <aside class="cotalog">
+            <a href="/catalog#"> <span id="cotalog">Каталог</span></a>
+            <div class="submenu">
+                <a href="/catalog#acoustic_guitar" title="Акустические гитары">
+                    <img src="../icons/acoustic-guitar(1).svg">
+                    <span> Акустик гитары </span>
+                </a>
+                <a href="/catalog#bass_guitar" title="Басс гитары">
+                    <img src="../icons/bass-guitar.svg">
+                    <span style="margin-right:10%">Басс гитары</span>
+                </a>
+                <a href="/catalog#electro_guitar" title="Электро-гитары">
+                    <img src="../icons/electric-guitar.svg">
+                    <span>Электро-гитары</span></a>
+                </a>
+                <a href="/catalog#ukelele" title="Укулеле">
+                    <img src="../icons/ukelele.svg">
+                    <span style="margin-right:30%">Укулеле</span>
+                </a>
+            </div>
+        </aside>
+
+        <!--Контент-->
+        <div class="main spinner">
+            <!--Корзина-->
+            <div class="titlebox">
+                <h1 class="p_title">Корзина </h1>
+                <div class="deleteall"> <span> Очистить корзину </span> </div>
+            </div>
+            <div class="empty">
+                <img src="../128.png" alt="" id="slavic">
+                <p class="span_text empty_font">В данный момент ваша корзина пуста</p>
+                <p class="span_text">Перейти в <a href="../catalog/catalog.html#">каталог</a>?</p>
+            </div>
+            <ul id="list">
+            </ul>
+            &nbsp;
+            <section style="display: flex; align-items: center; justify-content: space-between;">
+                <p class="p_text" style="flex-grow: .7;">Общая сумма:<span id="sum">0</span></p>
+                <form onsubmit="buyAll(event);" style="display: inline-block;" action="/order" method="post">
+                    <button type="submit" style="background-color: white; border: none;"> 
+                        <span class='buy_all'>Купить все</span> 
+                    </button>
+                </form><br>
+            </section>
+        </div>
+
+        <!--Футер-->
+        <footer>
+            <p class="p_text">© 1994-2024, ООО «Le music». Все права защищены.
+                Сайт носит информационный характер и не является публичной офертой,
+                определяемой Гражданским кодексом РФ.
+                Для получения актуальной и подробной информации о наличии
+                и стоимости товаров и услуг пожалуйста,
+                обращайтесь к нашим менеджерам.
+            </p>
+            <br>
+            <p class="p_text">Счетчик посещений сайта:<span id="ID_Count">1</span></p>
+        </footer>
+    </div>
+    <script src="./busket.js"></script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

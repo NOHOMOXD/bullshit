@@ -1,0 +1,37 @@
+<?xml?>
+<users>
+    <user>
+        <email>admin</email>
+        <password>12345</password>
+        <name>admin</name>
+        <lastname>admin</lastname>
+    </user>
+    <user>
+        <email>putin</email>
+        <password>kruto</password>
+    </user>
+    <user>
+        <name>Иван</name>
+        <lastname>Бурундуков</lastname>
+        <phonenumber>79117626145</phonenumber>
+        <adress></adress>
+        <email>ivanbur@gmail.com</email>
+        <password>12345</password>
+    </user>
+    <user>
+        <name>Никита</name>
+        <lastname>Лопарев</lastname>
+        <phonenumber>79112408441</phonenumber>
+        <adress></adress>
+        <email>lop@mail.ru</email>
+        <password>12345</password>
+    </user>
+    <user>
+        <name>Хуй</name>
+        <lastname>Хуй</lastname>
+        <phonenumber>Хуй</phonenumber>
+        <adress>Хуй2</adress>
+        <email>хуй@gmail.com</email>
+        <password>123</password>
+    </user>
+</users>

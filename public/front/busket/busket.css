@@ -1,0 +1,133 @@
+/*Позиция товара*/
+#list li{
+    display: inline-block;
+    padding: 1em;
+    width: 85%;
+    vertical-align: middle;
+    box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.25);
+    transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+    list-style-type: none;
+    margin: 1rem;
+    word-wrap: break-word;
+}
+#list li:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#list li img{
+    padding: 2%;
+    border:1px solid black;
+    margin-left: 5%;
+    width: 13%;
+}
+#list li img:hover{
+    cursor: pointer;	
+    border:1px solid #4DD0E1;
+   }
+.more{
+    margin:0 0.2em;
+}
+/*Кнопка удалить*/
+.Delete{
+    float: right;
+    border-bottom: 1px solid red;
+    margin-top: 30%;
+    padding:0.3em;
+    transition: all 0.2s ease;
+    margin-left: 50%;
+    
+}
+.Delete:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(219, 40, 40);
+}
+.buy{
+    transition: all 0.2s ease;
+    padding:0.3em;
+    float: right;
+    border-bottom: 1px solid #4DD0E1;
+}
+.buy:hover{
+    cursor: pointer;
+    color: white;
+    background-color:#4DD0E1;
+}
+/*Название тавара*/
+.title{
+    margin-right: 1em;
+    margin-top: 4%;
+    float: right;
+}
+ .name{
+    width: 35%;
+    float: left;
+    margin-top: 5%;
+    margin-left: 1em;
+}
+/*Изображение товара*/
+.sp img{
+    float: left;
+}
+.empty{
+    margin-top: 11%;
+    display: none;
+}
+.empty_font{
+    font-size: 3rem;
+    font-family: 'Open Sans Light';
+    margin-bottom: 2rem;
+}
+.span_text a{
+    text-decoration: underline;
+    color: #33B6C7;
+}
+.span_text a:hover{
+    text-decoration: none;
+}
+/*Кнопка очистки корзины*/
+.titlebox .p_title{
+    float: left;
+}
+.deleteall{
+    display:none;
+    padding-top:0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #4DD0E1;
+    margin-right: 2.5rem;
+    float: right;
+}
+.deleteall:hover{
+    cursor: pointer;
+    color: #33B6C7;
+}
+.deleteall:active{
+    color: #4DD0E1;
+}
+.deleteall img{
+    width: 2rem;
+}
+section p.p_text{
+    display:none;
+}
+.forone{
+    float: right;
+    margin-right: 1.3rem;
+}
+
+.buy_all{
+    display:flex;
+    padding-top:0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #4DD0E1;
+    margin-right: 2.5rem;
+}
+.buy_all:hover{
+    cursor: pointer;
+    color: #33B6C7;
+}
+.buy_all:active{
+    color: #4DD0E1;
+}
+.buy_all img{
+    width: 2rem;
+}

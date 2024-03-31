@@ -1,0 +1,47 @@
+/*Стиль кнопки показать/показать*/
+.more{
+    font-size: 0.9em;
+}
+.span_text{
+margin-bottom: 0;
+}
+/*Стиль для текста выделенного жырным*/
+.p_text strong{
+    font-size: 1.3em;
+}
+/*Стили для скрытого блока*/
+.sub{
+    float: left;
+    word-break: break-word;
+    width:53%;
+    padding-bottom: 3%;
+}
+.supersub img{
+    float: right;
+    width: 35%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    transition: all 0.3s ease;
+    box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.25);
+    
+}
+.supersub img:hover{
+    box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.7);
+}
+.supersub{
+    display: none;
+    padding-bottom: 10%;
+}
+/*Анимация появления*/
+@keyframes go-down { 
+    from {
+        opacity: 0;    
+    }
+    to {
+        opacity: 1;
+    }
+  }
+/*Задаю минимальную высоту для контент-блока*/
+.main{
+    min-height: calc(80vh - 80px);
+}
